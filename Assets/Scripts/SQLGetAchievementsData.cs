@@ -14,7 +14,7 @@ public class SQLGetAchievementsData : MonoBehaviour {
 
     public IEnumerator GetData(string username)
     {
-        WWWForm form = new WWWForm();
+        .//WWWForm form = new WWWForm();
         form.AddField("myform_hash", hashCode);
         form.AddField("myform_nick", username);
         WWW w = new WWW(connectionURL, form); //here we create a var called 'w' and we sync with our URL and the form

@@ -22,7 +22,7 @@ public class SQLConnection : MonoBehaviour {
         WWWForm form = new WWWForm(); 
         form.AddField("myform_hash", hashCode);
         form.AddField("myform_nick", username);
-        form.AddField("myform_pass", password);
+        //form.AddField("myform_pass", password);
         WWW w = new WWW(connectionURL, form); //here we create a var called 'w' and we sync with our URL and the form
         yield return w; //we wait for the form to check the PHP file, so our app dont just hang
         if (w.error != null)

@@ -32,7 +32,7 @@ public class LogInManager : MonoBehaviour {
     }
     public void SignUp()
     {
-        Debug.Log("Not Implemented");
+        //Debug.Log("Not Implemented");
     }
     public string GetLoggedInUser()
     {

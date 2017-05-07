@@ -9,14 +9,17 @@ public class PageScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+	/*
 	void Update () {
 	
 	}
+	*/
 
     public void disablePage()
     {
         gameObject.SetActive(false);
     }
+
     public void enablePage()
     {
         gameObject.SetActive(true);
