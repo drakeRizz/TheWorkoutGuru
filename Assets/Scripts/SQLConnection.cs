@@ -4,8 +4,9 @@ using System.Collections;
 public class SQLConnection : MonoBehaviour {
 
     private string hashCode = "SecretHashcode";
-    public string connectionURL = "http://127.0.0.1/Login.php";
-    private string responseString;
+    //  The new connection URL is http://gerardroof.ro/theworkoutguru/Login.php
+    public string connectionURL = "http://gerardroof.ro/theworkoutguru/Login.php";
+    private string responseString = string.Empty;
     public bool isLoggedIn = false;
     // Use this for initialization
     void Start () {
@@ -23,7 +24,7 @@ public class SQLConnection : MonoBehaviour {
         form.AddField("myform_nick", username);
         form.AddField("myform_pass", password);
         WWW w = new WWW(connectionURL, form); //here we create a var called 'w' and we sync with our URL and the form
-        yield return w; //we wait for the form to check the PHP file, so our game dont just hang
+        yield return w; //we wait for the form to check the PHP file, so our app dont just hang
         if (w.error != null)
         {
             Debug.Log(w.error); //if there is an error, tell us
