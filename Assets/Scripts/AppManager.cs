@@ -64,10 +64,13 @@ public class AppManager : MonoBehaviour {
     public void btnFriends()
     {
         menuPage.GetComponent<Animation>().PlayQueued("HidePage", QueueMode.CompleteOthers);
-        friendsPage.SetActive(true);
-        friendsPage.GetComponent<Animation>().PlayQueued("ShowPage", QueueMode.CompleteOthers);
+        //friendsPage.SetActive(true);
+        //friendsPage.GetComponent<Animation>().PlayQueued("ShowPage", QueueMode.CompleteOthers);
         lastPage = currentPage;
-        currentPage = friendsPage;
+        //currentPage = friendsPage;
+        currentPage = achievementsPage;
+        achievementsPage.SetActive(true);
+        achievementsPage.GetComponent<Animation>().PlayQueued("ShowPage", QueueMode.CompleteOthers);
     }
     public void backBtn(){
         if(currentPage == menuPage)
