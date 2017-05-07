@@ -28,7 +28,8 @@ public class AchievementsManager : MonoBehaviour {
     {
         WWWForm form = new WWWForm();
         form.AddField("myform_hash", hashCode);
-        form.AddField("myform_nick", username);
+        //form.AddField("myform_nick", username);
+        form.AddField("myform_username", username);
         form.AddField("myform_coins", coins);
         form.AddField("myform_achievement_id", achievement_id);
         form.AddField("myform_user_id", user_id);
