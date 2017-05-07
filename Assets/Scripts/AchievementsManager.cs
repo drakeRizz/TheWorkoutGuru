@@ -7,7 +7,9 @@ public class AchievementsManager : MonoBehaviour {
     private SQLGetAchievementsData sql;
     public GameObject achievementsPanel;
     public GameObject achievementItemPrefab;
+    // We should change this SecretHashCode...it's dummy.
     private string hashCode = "SecretHashcode";
+    // The URL below is representing the path to the PHP file that returns the achievements from the database
     public string connectionURL = "http://gerardroof.ro/theworkoutguru/GetAchievementsData.php";
     public string responseString;
     public Text coinsText;
@@ -47,7 +49,7 @@ public class AchievementsManager : MonoBehaviour {
         int newCoins = oldCoins + coins;
         coinsText.text = "" + newCoins;
     }
-
+    // Method for parsing the achievements data
     public void splitAchievementsData()
     {
         int user_id=0;
